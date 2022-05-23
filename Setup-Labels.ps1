@@ -85,7 +85,7 @@ New-Label -DisplayName "External" -Name "External" -Tooltip "Use to identify and
 Set-Label -Identity "Internal" -ApplyContentMarkingFooterAlignment "Left" -ApplyContentMarkingFooterEnabled $true -ApplyContentMarkingFooterFontColor "#000000" -ApplyContentMarkingFooterFontName "Courier New" -ApplyContentMarkingFooterFontSize "10" -ApplyContentMarkingFooterMargin "5" -ApplyContentMarkingFooterText "Confidential (Internal)"
 
 #add footers to Confidential documents
-Set-Label -Identity "External" -ApplyContentMarkingFooterAlignment "Left" -ApplyContentMarkingFooterEnabled $true -ApplyContentMarkingFooterFontColor "#000000" -ApplyContentMarkingFooterFontName "Courier New" -ApplyContentMarkingFooterFontSize "10" -ApplyContentMarkingFooterMargin "5" -ApplyContentMarkingFooterText "Confidential (External)" -EncryptionEnabled $true
+Set-Label -Identity "External" -ApplyContentMarkingFooterAlignment "Left" -ApplyContentMarkingFooterEnabled $true -ApplyContentMarkingFooterFontColor "#000000" -ApplyContentMarkingFooterFontName "Courier New" -ApplyContentMarkingFooterFontSize "10" -ApplyContentMarkingFooterMargin "5" -ApplyContentMarkingFooterText "Confidential (External)" 
 
 
 #Create the label policay that will publish the labels to the users
