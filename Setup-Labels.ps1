@@ -92,4 +92,10 @@ Set-Label -Identity "External" -ApplyContentMarkingFooterAlignment "Left" -Apply
 
 New-LabelPolicy -Name "Global" -Labels "Personal","Public","General","Confidential","Internal","External"
 
+#get auth domain for setting user permissions on labels e.g. yourdomain.com
+$authdomain = read-host -Prompt "Please enter domain name" #this has to be your authentication domain e.g. yourcompany.com
+
+#set label encyption for external label
+Set-Label -Identity "External" -EncryptionOfflineAccessDays 30 -EncryptionEnabled $true -SiteAndGroupProtectionEnabled $true -EncryptionProtectionType template -ContentType "File,Email,Site,UnifiedGroup" -Confirm:$false -EncryptionRightsDefinitions "AuthenicatedUsers@$($authdomain):VIEW,VIEWRIGHTSDATA,DOCEDIT,EDIT,REPLY,REPLYALL"
+
 
